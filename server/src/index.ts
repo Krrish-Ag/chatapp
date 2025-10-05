@@ -11,12 +11,10 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL_VITE,
+    origin: "*",
     credentials: true,
   },
 });
-
-console.log("Debugging", process.env.CLIENT_URL_VITE);
 
 io.on("connect", (socket) => {
   console.log("User connected", socket.id);
