@@ -21,6 +21,7 @@ function MessagingArea({
   // const getClasses =
 
   function goToBottom() {
+    //@ts-ignore
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }
 
