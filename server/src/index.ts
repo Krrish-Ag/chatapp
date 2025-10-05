@@ -1,6 +1,9 @@
 import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const port = 3000;
 
@@ -8,7 +11,11 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      process.env.CLIENT_URL_VITE as string,
+    ],
     credentials: true,
   },
 });
