@@ -20,6 +20,8 @@ const io = new Server(server, {
   },
 });
 
+console.log("Debugging", process.env.CLIENT_URL_VITE as string);
+
 io.on("connect", (socket) => {
   console.log("User connected", socket.id);
   socket.join("public");
