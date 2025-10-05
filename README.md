@@ -1,4 +1,6 @@
-### Front end using "npm run dev", backend using "npx nodemon"
+https://chatapp-ten-gamma.vercel.app/
+
+### Front end using "npm run dev", backend using "npm run dev"
 - Can open mutiple instance of port 5173 to have a group chat
 - by default all sessions have a "public" room which cannot be removed, they can be used like announcements
 - Can add custom rooms, with inbuilt vibrant colours highlighting room name and messages as well (with the same shade)
